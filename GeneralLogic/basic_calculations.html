@@ -55,13 +55,20 @@ var totalages = (ageLinda + ageGuaraciara + agePerola) / 3;
 showResult("The daughters' average age is: " + totalages);
 
 function jumpLine() {
-	document.write("<br>");
+	document.write("<br><hr>");
 }
 
 function showResult(phrase){
 	document.write(phrase);
 	jumpLine();
 }
+
+
+//Age Difference
+var myAge = 24;
+var myBrotherAge = 19;
+var differenceAge = myAge - myBrotherAge;
+showResult("The difference between my age and my brother's age is: " + differenceAge + " years.");
 
 
 </script>

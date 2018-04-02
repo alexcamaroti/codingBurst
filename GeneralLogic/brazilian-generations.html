@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>How Many Generations?</h1>
+	<p>On average, a couple have children when they reach the age of 28. Following this average, if the Portuguese arrived in 1500 in Brazil, then the first generation of Brazilians appeared in 1528, the second in 1556 and so on. From 1500 to the current year, how many generations has been passed?</p>
+
+
+
+	<script>
+
+
+//How many generations since 1500 after the arrival of the Portuguese
+var yearsAfterArrival = 2018 - 1500;
+var averageAgeToHaveChildren = 28;
+var numberOfGenerations = yearsAfterArrival / averageAgeToHaveChildren;		
+showResult(numberOfGenerations);
+
+function showResult(information){
+	jumpLine();
+	document.write("<big>Since 1500, " + information + " generations of brazilian's family has been existed in Brazil</big>");
+
+}
+
+function jumpLine(){
+	document.write("<br><hr>");
+}
+</script>
+</body>
+</html>
