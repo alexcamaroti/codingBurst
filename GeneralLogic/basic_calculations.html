@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<script>
+	var year = 2016;
+
+	showResult("Flávio has " + (year - 1976) + " years");
+	showResult("Joaquim has " + (year - 1980) + " years");
+	showResult("Barney has " + (year - 1958) + " years");
+
+//Formula aleatória 
+var	n = 5;
+showResult("The result of the formula is : " + n * (10 / 20)  + " <br>");
+
+
+//Year of Birth
+var myAge = 24;
+showResult("I born in " + (2018 - myAge));
+
+
+    //Basic Multiplication
+    var vTable = 8;
+    showResult(vTable + " times 1 is " + vTable * 1);
+    
+    showResult(vTable + " times 2 is " + vTable * 2);
+    
+    showResult(vTable + " times 3 is " + vTable * 3);
+    
+    showResult(vTable + " times 4 is " + vTable * 4);
+    
+    showResult(vTable + " times 5 is " + vTable * 5);
+    
+    showResult(vTable + " times 6 is " + vTable * 6);
+    
+    showResult(vTable + " times 7 is " + vTable * 7);
+    
+    showResult(vTable + " times 8 is " + vTable * 8);
+    
+    showResult(vTable + " times 9 is " + vTable * 9);
+    
+    showResult(vTable + " times 10 is " + vTable * 10);
+    
+
+//Arrendondar uma misdia
+var ageFlavio = 39;
+var ageJoaquim = 20;
+var ageBarney = 41;
+var average =(ageFlavio + ageJoaquim + ageBarney)/3;
+showResult('The average age is: ' + Math.round(average));
+
+//Daughters' average age
+var ageLinda = 12;
+var ageGuaraciara = 15;
+var agePerola = 13;
+var totalages = (ageLinda + ageGuaraciara + agePerola) / 3;
+showResult("The daughters' average age is: " + totalages);
+
+function jumpLine() {
+	document.write("<br>");
+}
+
+function showResult(phrase){
+	document.write(phrase);
+	jumpLine();
+}
+
+
+</script>
