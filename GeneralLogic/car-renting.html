@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rent a car Test</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+
+	//Getting basic information
+	var ageInformed = parseInt(prompt("Enter your age."));		
+
+	if (ageInformed >= 18){
+		var hasLicense = prompt("Do you have license? Answer Y or N.").toUpperCase();
+
+		if (hasLicense == "Y") {
+			showResult("Great, so you can rent a car.");
+		}
+
+		else if (hasLicense == "N"){		
+			showResult("Sorry, unfortunatelly you don't have all requirements.");
+
+		} else {
+
+			showResult("Hmm, you didn't answer properly. Try it again.");
+		}
+	}
+
+	else{
+		showResult("Sorry, you can't rent a car before you get 18 years old.");
+	}
+
+
+
+
+	function jumpLine() {
+		document.write("<br><hr>");
+	}
+
+	function showResult(phrase){
+		document.write(phrase);
+		jumpLine();
+	}
+
+</script>
+</body>
+</html>

@@ -11,12 +11,28 @@
 		/*
 			Rules: Victories = 3 points.
 			Draws: 1 points.
-		*/
+			*/
 
 			var victories = parseInt(prompt("Enter the number of victories"));
 			var draws = parseInt(prompt("Enter the number of draws"));
-			var totalPoints = (victories * 3) + draws;
-			showResult("The accumulated points are: " + totalPoints);
+			var totalPointsCurrentYear = (victories * 3) + draws;
+			showResult("The accumulated points are: " + totalPointsCurrentYear);
+
+			var totalPointsLastYear = 28;
+
+			if (totalPointsCurrentYear > totalPointsLastYear) {
+
+				showResult("Your team is better than last year.");
+			}
+
+			else if (totalPointsCurrentYear > totalPointsLastYear) {				
+
+				showResult("Your team is worse than last year.");
+			}
+			else if (totalPointsCurrentYear == totalPointsLastYear) {
+
+				showResult("Your team is the same as last year.");
+			}
 
 
 			function jumpLine() {

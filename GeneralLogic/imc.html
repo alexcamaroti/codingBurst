@@ -23,25 +23,36 @@
 	var informedName = prompt("Enter your name.");
 	var informedWeight = prompt(informedName + ", enter your weight.");
 	var informedHeight = prompt(informedName + ", enter your height.");
+	var informedBMIResult = calculateBMI(informedWeight, informedHeight);
 
-	showResult(informedName + ", your BMI is: " + calculateBMI(informedWeight, informedHeight)); 
+	showResult(informedName + ", your BMI is: " + informedBMIResult); 
 
 
-	function jumpLine() {
-		document.write("<br><hr>");
+	if (informedBMIResult < 18.5) {
+		showResult( informedName + ", your BMI is below average.");
+	}
+	else if (informedBMIResult > 35) {
+		showResult( informedName + ", your BMI is above average.");
+	}
+	else if (informedBMIResult >= 18.5 && informedBMIResult <= 35) {
+		showResult( informedName + ", your BMI is excellent!");
 	}
 
-	function showResult(phrase){
-		document.write(phrase);
-		jumpLine();
-	}
+		function jumpLine() {
+			document.write("<br><hr>");
+		}
 
-	function calculateBMI(weight, height){
-		var bmi = weight / (Math.pow(height, 2));
-		return bmi;
-	}
+		function showResult(phrase){
+			document.write(phrase);
+			jumpLine();
+		}
+
+		function calculateBMI(weight, height){
+			var bmi = weight / (Math.pow(height, 2));
+			return bmi;
+		}
 
 
-</script>
+	</script>
 </body>
 </html>
