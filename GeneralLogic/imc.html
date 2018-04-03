@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BMI</title>
+</head>
+<body>
+	
+
+	<script>
+	//BMI (body mass index) = IMC	
+	//BMI Variables
+	//Alex's weight and height
+	var bmiAlex	= calculateBMI(96, 1.71);
+	var generalMessage = "The BMI calculated is: ";
+	showResult(generalMessage + bmiAlex);
+
+	//Friend's Weight and Height
+	var bmiFlavio = calculateBMI(69, 1.80);
+	showResult("The BMI calculated is: " + bmiFlavio);
+
+
+	var informedName = prompt("Enter your name.");
+	var informedWeight = prompt(informedName + ", enter your weight.");
+	var informedHeight = prompt(informedName + ", enter your height.");
+
+	showResult(informedName + ", your BMI is: " + calculateBMI(informedWeight, informedHeight)); 
+
+
+	function jumpLine() {
+		document.write("<br><hr>");
+	}
+
+	function showResult(phrase){
+		document.write(phrase);
+		jumpLine();
+	}
+
+	function calculateBMI(weight, height){
+		var bmi = weight / (Math.pow(height, 2));
+		return bmi;
+	}
+
+
+</script>
+</body>
+</html>
