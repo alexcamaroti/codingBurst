@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Average Familiar Age</title>
+</head>
+<body>
+	
+
+
+
+	<script>
+
+		var relativesNumber = parseInt(prompt("How many relatives do you have?"));
+		var age = 0;
+
+		for(var i = 1; i <= relativesNumber; i++) {
+
+			age = age + parseInt(prompt("Enter the familiar age."));						
+
+		}
+
+		var averageRelativeAge = age / relativesNumber;
+		showResult("The average age of your relatives is: "+ averageRelativeAge)
+
+
+
+		function jumpLine() {
+			document.write("<br><hr>");
+		}
+
+		function showResult(phrase){
+			document.write(phrase);
+			jumpLine();
+		}
+
+	</script>
+</body>
+</html>

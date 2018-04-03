@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validating User</title>
+</head>
+<body>
+	
+
+	
+	<script>
+
+		var loginRegistered = "alex";
+		var passwordRegistered = "alex123";
+		var numberAttempt = 0;		
+		var loginInformed = "";
+		var passwordInformed = "";
+		var userValidated = false;
+		var maximumAttempt = 3;
+
+
+		while(numberAttempt < maximumAttempt && userValidated == false){
+			loginInformed = prompt("Enter your login.").toLowerCase();
+			passwordInformed = prompt("Enter your password.");
+
+			if (loginRegistered == loginInformed && passwordRegistered == passwordInformed) {
+				showResult("Welcome to the system, " + loginInformed + ".");
+				userValidated = true;
+
+			}
+			else {
+				alert("Invalid login. Try it again.");
+				numberAttempt++;
+			}
+
+		}
+
+		if(numberAttempt >= 3){
+			showResult("Sorry, You've made the most attempts. Your account is blocked.");
+		}
+
+
+		function jumpLine() {
+			document.write("<br><hr>");
+		}
+
+		function showResult(phrase){
+			document.write(phrase);
+			jumpLine();
+		}
+
+	</script>
+</body>
+</html>

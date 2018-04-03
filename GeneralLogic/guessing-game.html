@@ -11,24 +11,30 @@
 	<script>
 
 
-		var numberThought = guessNumber(10);
-		var numberInformed = parseInt(prompt("Enter your number thought between 1 and 10."));		
-
-
-
-		if (numberInformed == numberThought) {
-			showResult("Good job! This is the right number. I thought of number " + numberThought + "!");
-		}
+		var numberThought = guessNumber(10);		
+		var maximumAttempt = 3;
 		
-		else { 
 
-			if (numberInformed < numberThought){
-				showResult("Well, unfortutatelly it's not the right number. My number is bigger than the number you thought.");	
+		for(var i = 1; i <= maximumAttempt; i++){
+			var numberInformed = parseInt(prompt("Enter your number thought between 1 and 10."));
+
+
+			if (numberInformed == numberThought) {
+				showResult("Good job! This is the right number. I thought of number " + numberThought + "!");
+				break;
 			}
 
-			else (numberInformed > numberThought){
-				showResult("Well, unfortutatelly it's not the right number. My number is less than the number you thought.");		
+			else { 
+
+				if (numberInformed < numberThought){
+					showResult("Well, unfortutatelly it's not the right number. My number is bigger than the number you thought.");	
+				}
+
+				else if(numberInformed > numberThought){
+					showResult("Well, unfortutatelly it's not the right number. My number is less than the number you thought.");		
+				}
 			}
+
 		}
 
 		console.log(numberThought);

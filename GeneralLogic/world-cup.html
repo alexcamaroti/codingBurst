@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>World Cup</title>
+</head>
+<body>
+	
+
+	<script>
+		var yearLimit = parseInt(prompt("Enter the limit year (After 1930)."));
+		var yearWorldCup = 1930;
+
+		if (true) {
+			
+		}
+
+
+		while(yearWorldCup <= 2018){
+			showResult("Had World Cup in " + yearWorldCup);			
+			yearWorldCup = yearWorldCup + 4;
+		}
+
+		function jumpLine() {
+			document.write("<br><hr>");
+		}
+
+		function showResult(phrase){
+			document.write(phrase);
+			jumpLine();
+		}
+
+	</script>
+</body>
+</html>
