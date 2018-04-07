@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Guessing More Game</title>
+</head>
+<body>
+	<input type="text" name=""/>
+	<button>Verify</button>
+
+	<script>
+		//You can define drawn numbers until 10.
+		var secrets = drawNumbers(3);
+		console.log(secrets);
+		var input = document.querySelector("input");
+		var button = document.querySelector("button");
+		input.focus();
+
+
+
+		function drawNumbers(quantity) {
+			var numbers = [];
+			var position = 0;
+
+			while (position < quantity) {								
+
+				var randomNumberReturned = randomNumber();
+				
+				if (randomNumberReturned != 0) {
+					var numberFound = false;
+					for (var j = 0; j < numbers.length; j++) {						
+
+						if(randomNumberReturned == numbers[j]){
+							numberFound = true;
+						}
+					}
+
+					if (numberFound == false) {						
+						numbers.push(randomNumberReturned);
+						position++;
+					}
+					
+				}
+
+			}
+
+			return numbers;
+		}
+
+		function randomNumber(){
+			return Math.round(Math.random() * 10);
+		}
+
+		function verify() {
+			
+			var secretFound = false;
+			for(var i = 0; i < secrets.length; i++){
+
+				if (input.value == secrets[i]) {
+					secretFound = true;
+					alert("You are right!");
+				}
+			}
+
+			if (secretFound == false) {
+
+				alert("You are wrong!");
+			}
+
+			input.value = "";
+			input.focus();
+		}
+
+
+		button.onclick = verify;
+	</script>
+</body>
+</html>
